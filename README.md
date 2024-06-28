@@ -1,2 +1,2 @@
 # blazon
-Blazon: A twitter clone following the odin project. 
+Blazon: A twitter clone following the odin project.
