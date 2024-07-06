@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
-  outline: none;
-  box-sizing: border-box;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 html,
 body,
 #root {
-  background-color: var(--bg);
-  color: var(--fg);
-  margin: 0;
-  height: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    height: 100%;
+}
+
+#root {
+    margin: 0 auto;
+    display: flex;
 }

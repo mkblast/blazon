@@ -1,0 +1,80 @@
+.post {
+    margin: 0 10px;
+    padding: 0.8em;
+    display: flex;
+    gap: 0.2em;
+    flex-direction: column;
+    color: white;
+}
+
+.info {
+    text-decoration: none;
+    color: white;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.info>img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.info>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.info>div * {
+    margin: 0;
+}
+
+.name {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.username {
+    font-size: 0.9em;
+}
+
+.body {
+    color: white;
+    text-decoration: none;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.like {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: red;
+}
+
+.replies {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: lightblue;
+}

@@ -1,0 +1,44 @@
+.bar {
+    padding-top: 1em;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.bar img {
+    width: 64px;
+    height: auto;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.home,
+.explore,
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    align-items: center;
+    display: flex;
+    gap: 1em;
+}
+
+
+.list span {
+    font-size: 2em;
+}

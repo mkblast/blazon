@@ -2,7 +2,10 @@ export type User = {
     _id: string,
     name: string,
     username: string,
+    about: string,
     date: string,
+    following: string[],
+    profile_image: string,
 }
 
 export type Post = {

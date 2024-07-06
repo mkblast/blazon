@@ -1,0 +1,60 @@
+.container {
+    margin-top: 1em;
+}
+
+.info {
+    text-decoration: none;
+    color: white;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.info>img {
+    width: 100px;
+}
+
+.info>div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.info>div * {
+    margin: 0;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.username {
+    font-size: 1.3em;
+}
+
+.nav {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav > li {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.nav *{
+    /* flex-grow: 1; */
+    color: white;
+    text-decoration: none;
+}
+
+.nav_selected {
+    background-color: red;
+}
