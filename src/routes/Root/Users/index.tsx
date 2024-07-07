@@ -150,32 +150,46 @@ function User() {
         <div className={Styles.container}>
             {user ?
                 <div className={Styles.user}>
-                    <div className={Styles.top}>
-                        <div className={Styles.info}>
-                            <img src={user.profile_image} alt="" />
-                            <div>
-                                <p className={Styles.name}>{user.name}</p>
-                                <p className={Styles.username}>{user.username}</p>
+                    <div>
+                        <div className={Styles.top}>
+                            <div className={Styles.info}>
+                                <img src={user.profile_image} alt="" />
+                                <div>
+                                    <p className={Styles.name}>{user.name}</p>
+                                    <p className={Styles.username}>{user.username}</p>
+                                </div>
                             </div>
+                            {
+                                me?._id !== user._id ?
+                                    <div>
+                                        <button onClick={handleFollow}>
+                                            {
+                                                following ?
+                                                    "Unfollow"
+                                                    :
+                                                    "Follow"
+                                            }
+                                        </button>
+                                    </div>
+                                    :
+                                    <></>
+                            }
                         </div>
-                        {me?._id !== user._id ?
-                            <div>
-                                <button onClick={handleFollow}>
-                                    {
-                                        following ?
-                                            "Unfollow"
-                                            :
-                                            "Follow"
-                                    }
-                                </button>
-                            </div>
+                    </div>
+                    {
+                        me?._id === user._id ?
+                            <form onSubmit={(e) => {
+                                e.preventDefault();
+                            }}>
+                                <input type="file" onChange={handleFileChange} required />
+                                <button onClick={handleProfileImgSubmit}>submit</button>
+                            </form>
                             :
                             <></>
-                        }
-                    </div>
+                    }
                     <div className={Styles.middle}>
                         {/* TODO: Add follower and following count */}
-                        <p>{formatDate(user.date)}</p>
+                        <p>Joined on: {formatDate(user.date)}</p>
                     </div>
                     <div className={Styles.buttom}>
                         {
@@ -211,12 +225,6 @@ function User() {
                 :
                 <> </>
             }
-            <form onSubmit={(e) => {
-                e.preventDefault();
-            }}>
-                <input type="file" onChange={handleFileChange} required />
-                <button onClick={handleProfileImgSubmit}>submit</button>
-            </form>
             <ul className={Styles.nav}>
                 <li className={searchParams.has("replies") === false ? Styles.nav_selected : ""}>
                     <Link to={`/users/${id}`}>Posts</Link>

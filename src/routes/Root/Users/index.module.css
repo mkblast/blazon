@@ -2,6 +2,12 @@
     margin-top: 1em;
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .info {
     text-decoration: none;
     color: white;

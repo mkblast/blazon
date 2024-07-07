@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { User } from "../../types";
 import Styles from "./index.module.css";
-import icon from "../../../public/icon.png";
+import icon from "/icon.png";
 
 type NavBarProps = {
     me: User,

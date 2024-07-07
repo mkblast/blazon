@@ -1,6 +1,7 @@
 import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 import { Post as PostType } from "../../types";
 import { useApp } from "../../App";
+import Styles from "./newPost.module.css";
 
 type NewPostProps = {
     reply_to: string | null,
@@ -52,10 +53,20 @@ function NewPost(
 
     return (
         <>
-            <form onSubmit={(e) => {
-                e.preventDefault();
-            }}>
-                <textarea name="body" onChange={handleInputChange} value={post}></textarea>
+            <form className={Styles.form}
+                onSubmit={(e) => {
+                    e.preventDefault();
+                }}
+            >
+                <textarea
+                    className={Styles.input}
+                    name="body"
+                    onChange={handleInputChange}
+                    value={post}
+                    cols={50}
+                    rows={4}
+                >
+                </textarea>
                 <button onClick={handleSubmit}>
                     <span className="material-icons">send</span>
                 </button>
