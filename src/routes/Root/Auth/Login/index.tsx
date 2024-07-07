@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { InputError } from "../../../types";
+import { InputError } from "../../../../types";
 import { Link } from "react-router-dom";
 import Styles from "./index.module.css";
 

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useApp } from "../../App";
 import { Post } from "../../types";
 import Posts from "../../components/Posts";
-import NavBar from "../../components/NavBar";
 import NewPost from "../../components/Posts/newPost";
 
 function Root() {
